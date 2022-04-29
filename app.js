@@ -1,4 +1,4 @@
-const { writeFile, copyFile } = require('./utils/generate-site.js');
+const { writeFile, copyFile } = require('./utils/generate-site');
 const inquirer = require('inquirer');
 const generatePage = require('./src/page-template');
 
@@ -9,7 +9,7 @@ const promptUser = () => {
         {
             typer: 'input',
             name: 'name',
-            message: 'What is your name?',
+            message: 'What is your name? (Required)',
             validate: nameInput => {
                 if (nameInput) {
                   return true;
